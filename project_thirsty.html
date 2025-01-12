@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Endlessette | Portfolio</title>
+
+    <!-- All your CSS files -->
+    <link href="https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <!-- Your other CSS files... -->
+
+    <!-- Your custom project page styles -->
+
+    <!-- Copy all your existing head content from index.html -->
+    <!-- Add this additional CSS for blog styling -->
+    <style>
+        .project-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+        }
+
+        .project-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .project-content h1 {
+            font-family: 'Alegreya Sans SC', sans-serif;
+            font-weight: 300;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .project-content p {
+            font-family: 'Scada', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body class="project-page">
+    <!-- Copy your entire header/navbar section from index.html -->
+    <div class="cd-slider-nav">
+        <nav class="navbar">
+            <div class="tm-navbar-bg">
+                
+                <a class="navbar-brand" href="#">
+                    <img src="img/seal_logo.png" class="tm-brand-icon" alt="brand icon">
+                    <div class="brand-text">
+                        Endlessette Osborn
+                        <span class="brand-subtext">Technical Artist</span>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+                    &#9776;
+                </button>
+                <div class="collapse navbar-toggleable-md text-xs-center text-uppercase tm-navbar" id="tmNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item active selected">
+                            <a class="nav-link" href="#0" data-no="1">Games<span class="sr-only">(current)</span></a>
+                        </li>                                
+                        <li class="nav-item">
+                            <a class="nav-link" href="#0" data-no="2">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#0" data-no="3">Misc</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#0" data-no="4">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#0" data-no="5">Contact</a>
+                        </li>
+                    </ul>
+                </div>                        
+            </div>
+
+    <!-- Then your project content -->
+
+    <!-- Don't forget the JavaScript files at the bottom -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- New Project Content Section -->
+    <div class="container-fluid">
+        <div class="project-content">
+            <h1>Thirsty</h1>
+            
+            <div class="project-meta">
+                <span>Category: Game Development</span> | 
+                <span>Date: July 2024</span> | 
+                <span>Platform: PC</span>
+            </div>
+
+            <!-- Project Overview -->
+            <img src="img/HappyTrees/HappyTrees.gif" alt="Go Cones City Procedural Generation" style="width: 100%; margin: 20px 0;">
+            
+            <h2>Overview</h2>
+            <p>A tree procedural generation tool - easily create simple, fun, stylized trees.</p>
+            <p>Created in a team of 2 for Mythica's Canopy Crafters competition using Houdini and Unreal Engine.</p>
+            
+            
+
+            <!-- Development Process -->
+            <h2>Procedural Generation</h2>
+            <p>The basis of this game was built on my desire to learn procedural generation. I wanted to create a game where it felt like you could just drive forever into the horizon... because you could. </p>
+            <img src="img/GoCones/gocones_city.gif" alt="Go Cones" style="width: 100%; margin: 20px 0;">
+            
+
+            <h2>Art Direction</h2>
+            <p>The art direction for this game was largely influenced by my love of purple. I pushed the palette towards pinks and purples and blues, with hints of beautiful greens to liven it up. We used Japanese city streets for our city inspiration because of the peaceful feeling and beautiful architecture that I thought contributed to the peaceful feeling I wanted to push for.</p>
+            <img src="img/GoCones/gocones_artref.png" alt="Go Cones" style="width: 100%; margin: 20px 0;">
+            <p>For inspiration, I found Kat Tsai's "Sakura" (left) that hit the mark on what I wanted to achieve. I created a quick drawover (right) on a Japanese street artwork to show my team what I was thinking for the art style, and then started working on our post process shader...</p>
+        
+            <!-- Challenges and Solutions -->
+            <h2>Evolution of our Game</h2>
+            <p>Discuss challenges faced and how you solved them...</p>
+
+            <!-- Results/Outcome -->
+            <h2>Awards</h2>
+            <p>SJSU Game Dev Club Summer Jam: Best on Theme, Best Art Direction</p>
+
+
+
+            <h2>Project Credits</h2>
+            <p>Created by Endlessette Osborn and Mikyle Mosquera</p>
+
+            <!-- Links Section -->
+            <h2>Links</h2>
+            <p>
+                <a href="https://lectroblob.itch.io/gocones" target="_blank">Play the Game</a> | 
+                <a href="github-link" target="_blank">View Source Code</a>
+            </p>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html> 

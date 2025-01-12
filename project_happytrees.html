@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Endlessette | Portfolio</title>
+
+    <!-- All your CSS files -->
+    <link href="https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <!-- Your other CSS files... -->
+
+    <!-- Your custom project page styles -->
+
+    <!-- Copy all your existing head content from index.html -->
+    <!-- Add this additional CSS for blog styling -->
+    <style>
+        .project-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+        }
+
+        .project-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .project-content h1 {
+            font-family: 'Alegreya Sans SC', sans-serif;
+            font-weight: 300;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .project-content p {
+            font-family: 'Scada', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body class="project-page">
+    <!-- Copy your entire header/navbar section from index.html -->
+    <div class="cd-slider-nav">
+        <nav class="navbar">
+            <div class="tm-navbar-bg">
+                
+                <a class="navbar-brand" href="#">
+                    <img src="img/seal_logo.png" class="tm-brand-icon" alt="brand icon">
+                    <div class="brand-text">
+                        Endlessette Osborn
+                        <span class="brand-subtext">Technical Artist</span>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+                    &#9776;
+                </button>
+                <div class="collapse navbar-toggleable-md text-xs-center text-uppercase tm-navbar" id="tmNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item active selected">
+                            <a class="nav-link" href="#0" data-no="1">Games<span class="sr-only">(current)</span></a>
+                        </li>                                
+                        <li class="nav-item">
+                            <a class="nav-link" href="#0" data-no="2">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#0" data-no="3">Misc</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#0" data-no="4">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#0" data-no="5">Contact</a>
+                        </li>
+                    </ul>
+                </div>                        
+            </div>
+
+    <!-- Then your project content -->
+
+    <!-- Don't forget the JavaScript files at the bottom -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- New Project Content Section -->
+    <div class="container-fluid">
+        <div class="project-content">
+            <h1>HappyTrees Tree Generation</h1>
+            
+            <div class="project-meta">
+                <span>Category: Projects</span> | 
+                <span>Date: November 2024</span> | 
+                <span>Platform: PC</span>
+            </div>
+
+            <!-- Project Overview -->
+            <img src="img/HappyTrees/HappyTrees_Environment.gif" alt="HappyTrees Environment" style="width: 100%; margin: 20px 0;">
+            
+            <h2>Overview</h2>
+            <p>A tree procedural generation tool - easily create simple, fun, stylized trees.</p>
+            <p>Created in a team of 2 for Mythica's Canopy Crafters competition using Houdini and Unreal Engine.</p>
+            
+            <h2>Awards</h2>
+            <p>Mythica Canopy Crafters: Best Stylized</p>
+
+            <h2>Art Direction</h2>
+            <p>The goal of Mythica's competition was to make a large open-source resource for game developers to access different types of tree generator HDAs. We noticed a lot of the other participants were focusing making more realistic style trees, and so we decided to make what wasn't there yet: to make something fun and cute that could fit in smaller, more stylized games. We had three goals: cute, easy to use, and well optimized. </p>
+            <img src="img/HappyTrees/happytrees_reference.png" alt="HappyTrees Reference" style="width: 100%; margin: 20px 0;">
+            <p>For reference, we opted for very simplified trees with the silhouette as the main focus. We decided to keep things very simple because of the limited timeframe, which could also fit perfectly with our vision.</p>
+
+
+
+
+            <h2>Procedural Generation</h2>
+            <p>We created the initial tree shape and leaf mesh within Houdini, which was then exported to Unreal as an HDA. The materials were created in Unreal by me to bring the vision to life. </p>
+            <img src="img/HappyTrees/HappyTrees.gif" alt="HappyTrees Generation" style="width: 100%; margin: 20px 0;">
+            <img src="img/HappyTrees/happytrees_HDA.png" alt="HappyTrees HDA" style="width: 100%; margin: 20px 0;">
+            <p>The main tree structure uses an L-System. The parameter swaps out which rules the L-System uses to provide variations in the tree structure. Most of the randomization comes from the random seed parameter so that it's quick to iterate through a bunch of different trees in a short time period, and the user can select a dropdown parameter to switch between two different tree types (a taller, straighter tree and a shorter, rounder tree). The tree randomizes its branches rotation and curving to iterate through a bunch of variations quickly. I worked on this and the shader, while my teammate worked on the generation of the leaf mesh.</p>
+            
+            
+            <h2>Shaders</h2>
+            <p>I really wanted to give our trees a lot of fun colors to stay true to its name. Happy trees blowing in the wind...</p>
+            <img src="img/HappyTrees/happytrees_leafshader.png" alt="HappyTrees Leaf Shader" style="width: 100%; margin: 20px 0;">
+            <img src="img/HappyTrees/happytrees_barkshader.png" alt="HappyTrees Bark Shader" style="width: 100%; margin: 20px 0;">
+            <p>For the leaf shader, I started out with the texture itself. It's just a couple of leaves painted onto a texture, and each texture is projected onto every face of the leaf mesh, then scaled to give the tree a bushy feeling. The parameters are adjustable for if you'd prefer to have a thinner, sparser tree or a thick leafy tree. I started out using the emissive color to give the leaves a light and airy feel, but really disliked the lack of shadows and their inability to be used at night. So, instead I switched to a subsurface shading model and adjusted the colors using color ramps and hue adjustments in order to retain the airy, glowy feel while staying consistent with the time of day. The hue shifts a bit in the shadows to make the color feel more three-dimensional. </p>
+            <p>Then, the wind: using a SimpleGrassWind plugged into the vertex offset, the leaves softly sway in the wind (which can be adjusted with parameters). This touch is what brings the trees to life.</p>
+            <p>The bark texture is just a simple painted effect in Photoshop to give the simplified trunk a bit of texture and color. There's parameters to change the lightness of the material, allowing for different variations for different types of tree species.</p>
+            <img src="img/HappyTrees/happytrees_presets.png" alt="HappyTrees Presets" style="width: 100%; margin: 20px 0;">
+            <p>These are presets I created for using the trees, so that others using the materials would have some presets to work off of and then could adjust further to their own liking. There's 5 different color choices and 3 different bark choices to choose between!</p>
+
+
+            <h2>HDA to Unreal Implementation</h2>
+            <img src="img/HappyTrees/happytrees_tool.png" alt="HappyTrees Tool" style="width: 100%; margin: 20px 0;">
+            <p>After we created the HDA, I found myself frustrated with how slow it was to create trees using Houdini's base HDA to Unreal implementation. You could only make one tree at a time and had to wait for it to load every time you changed a setting, then move the HDA and do it again.... I decided I was tired of it, and so on a whim I decided I would script a tool to make it easier to use (to fit our 2nd goal, "easy to use.") I created this tool at the last second that allowed for a couple things to make tree generation easier: you can click to place a tree anywhere you want, you can quickly iterate between dragging parameters and recooking (it's well optimized so the cook loading time is fast), and you can switch to a new tree quickly and easily. It also gives the ability to bake all of these different trees at once after placing them all to your liking. It also makes it much easier to select materials for the trees to use. </p>
+
+            <p>Overall, I think we achieved all three of our goals in creating this project and I'm really happy with how it ended up. I also ended up using these trees in one of my other projects (GoCones) and it ended up fitting perfectly with the vibe of the game, which was not intended but I'm really glad it worked out that way!</p>
+
+
+
+            <h2>Project Credits</h2>
+            <p>Created by Endlessette Osborn and Mikyle Mosquera</p>
+
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html> 
