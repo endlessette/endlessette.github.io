@@ -71,22 +71,35 @@ a:focus {
     font-weight: 300 !important;
     font-size: 24px !important;
 	color: white !important;
+	margin-left: 0;
 }
 
+
+
+
+
 .brand-text {
-    display: inline-block;  /* This keeps it in line with your icon */
+    display: flex;
+    flex-direction: column;  /* This keeps it in line with your icon */
+	margin-left: 0;
+}
+
+.brand-name {
+    font-size: 2.5rem;
+    line-height: 1.2;
+	text-align: left;
+	margin-left: 0;
 }
 
 .brand-subtext {
     display: block;
 	text-align: left !important;
-    font-size: 18px;  /* Adjust size as needed */
-    font-weight: 400; /* Makes it lighter than the main text */
     color: white;     /* Same color as main text */
     margin-top: -5px; /* Adjusts spacing between main text and subtext */
 	font-family: 'Scada', sans-serif !important;
-    font-size: 14px !important;
+    font-size: 1.2rem !important;
     font-weight: 400 !important;
+	margin-left: 0;
 }
 
 .cd-slider-nav .navbar-nav {
@@ -282,6 +295,7 @@ button:focus { outline: none; }
         align-items: center;
     -ms-flex-pack: center;
         justify-content: center;
+	
 }
 
 .cd-hero-slider p:last-child { margin-bottom: 0; }
@@ -397,8 +411,9 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
 .navbar-nav .nav-link { height: 50px; }
 
 .tm-brand-icon { 
-	font-size: 3rem;
-	padding: 10px;
+	max-height: 80px;
+    width: auto;
+    margin-right: 10px;
 }
 
 .cd-hero-slider .cd-full-width { text-align: left; }
@@ -942,10 +957,20 @@ figure.effect-bubba:hover p {
 .project-content h4,
 .project-content p,
 .project-content ul,
-.project-content .project-meta,
-.project-content a {
+.project-content .project-meta {
     font-family: 'Scada', sans-serif !important;
 	color: white;
+}
+
+.project-content a {
+	font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+	color: #fca0ff;
+}
+
+.project-content a:hover {
+	color: #f957ff;
 }
 
 /* Keep specific styling for different elements */
@@ -1012,16 +1037,18 @@ body.project-page {
 .contact-container {
     background: rgb(23, 21, 54);
     border-radius: 20px;
+	gap: 20px;
     padding: 40px;
     display: flex;
+	flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .contact-form-section {
     flex: 1;
     padding-right: 40px;
+	min-width: 300px;
 }
 
 .contact-info-section {
@@ -1029,6 +1056,7 @@ body.project-page {
     padding: 30px;
     border-radius: 15px;
     width: 300px;
+	flex: 0 1 300px; /* Don't grow, can shrink, base width 300px */
 }
 
 .contact-info-section h3 {
@@ -1167,6 +1195,43 @@ body.project-page {
 
 .software-icon:hover .tooltiptext {
     visibility: visible; /* Slight zoom on hover */
+}
+
+
+@media (max-width: 576px) {
+    .brand-name {
+        font-size: 1.5rem !important;
+    }
+    
+    .brand-subtext {
+        font-size: 1rem !important;
+		margin-top: 0;
+    }
+    
+    .tm-brand-icon {
+        max-height: 70px;
+		margin-right: -10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-form-section,
+    .contact-info-section {
+        width: 100%;
+    }
+    
+    .software-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
 }
 
 
