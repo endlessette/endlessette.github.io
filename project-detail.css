@@ -1,0 +1,175 @@
+/* Project Detail Styles */
+.project-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.cover-image {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.cover-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.project-metadata {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.metadata-item h4 {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.metadata-item p, 
+.metadata-item a {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.metadata-item a:hover {
+    color: var(--primary-color);
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+.content-section img {
+    width: 100%;
+    display: block;
+}
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.caption h4 {
+    margin: 0 0 10px 0;
+}
+
+.caption p {
+    margin: 0;
+    padding-right: 80px; /* Make space for the button */
+}
+
+.show-more {
+    position: absolute;
+    right: 20px;
+    bottom: 20px; /* Align with bottom padding */
+    background: none;
+    color: var(--primary-color);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    line-height: 1; /* Match text line height */
+}
+
+.show-more:hover {
+    opacity: 0.8;
+}
+
+.hide {
+    background: none;
+    color: var(--primary-color);
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.hide:hover {
+    opacity: 0.8;
+}
+
+.expandable-content {
+    display: none;
+}
+
+.expandable-content.active {
+    display: block;
+}
+
+.full-content {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    margin-top: 2px;
+}
+
+.project-credits {
+    margin-top: 4rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.project-credits h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.credits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.credits-item h4 {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.credits-item p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .project-metadata,
+    .credits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-detail {
+        padding: 0 0.5rem;
+    }
+} 
