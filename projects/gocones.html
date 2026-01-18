@@ -56,23 +56,30 @@
                 </div>
             </div>
 
-            <div class="content-section">
-                <img src="../assets/GoCones/gocones_city.gif" alt="Art Direction">
-                <div class="caption">
-                    <h4>Art Direction</h4>
-                    <p>Led team's overall art direction for the game</p>
-                    <button class="show-more">MORE</button>
-                </div>
-                <div class="expandable-content">
-                    <div class="full-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-                        <button class="hide">HIDE</button>
-                    </div>
-                </div>
-            </div>
+
 
             <div class="project-content">
+
+
+
+                <div class="content-section">
+                    <img src="../assets/GoCones/gocones_city.gif" alt="Art Direction">
+                    <div class="caption">
+                        <h4>Art Direction</h4>
+                        <p>Led team's overall art direction for the game</p>
+                        <button class="show-more"hidden disabled>MORE</button>
+                    </div>
+                    <div class="expandable-content">
+                        <div class="full-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                            <button class="hide">HIDE</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                
                 <div class="content-section">
                     <img src="../assets/GoCones/gocones_generation.png" alt="City Generation">
                     <div class="caption">
@@ -82,8 +89,8 @@
                     </div>
                     <div class="expandable-content">
                         <div class="full-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                            <p>The goal was to build an infinitely generating city - to infinitely drive down endless roads selling ice cream wherever you please. We created a 3x3 grid system where the player is always in the center chunk and tiles get created/removed as the player drives. Each tile is assigned a random value for every edge (0 or 1) to determine whether it has an attached road or not (or if it's adjacent to another tile, it uses the edge value of the adjacent edge). This made it possible to create seamless roads across infinitely generating tiles with no dead ends. The roads themselves are then created using splines and spline meshes. </p>
+                            <p>Objects on the sidewalks were placed using offsets from the road splines - tree boxes, bike racks, parked cars, street lamps, etc.</p>
                             <button class="hide">HIDE</button>
                         </div>
                     </div>
@@ -94,7 +101,7 @@
                     <div class="caption">
                         <h4>Post-Processing</h4>
                         <p>Designed and implemented post-processing style</p>
-                        <button class="show-more">MORE</button>
+                        <button class="show-more"hidden disabled>MORE</button>
                     </div>
                     <div class="expandable-content">
                         <div class="full-content">
@@ -113,7 +120,7 @@
                     <div class="caption">
                         <h4>Customer Generation</h4>
                         <p>Programmed system for randomly generated customer designs and functionality</p>
-                        <button class="show-more">MORE</button>
+                        <button class="show-more"hidden disabled>MORE</button>
                     </div>
                     <div class="expandable-content">
                         <div class="full-content">
@@ -134,8 +141,29 @@
                     </div>
                     <div class="expandable-content">
                         <div class="full-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                            <p>Developed region system for region-based supply/demand system<br>
+
+                                Created minimap that updates with player and truck location & highlights new regions<br>
+                                
+                                Added ability to change flavors to custom flavors and names<br>
+                                
+                                Added ice cream hotbar with updating inventory and colors<br>
+                                
+                                Implemented death and money counters<br>
+                                
+                                Added a vertex shader for fun that makes the customers a bit fatter after getting ice cream o.O<br>
+                                
+                                Created shader custom depth that allows you to see the customers through objects for ease of search<br>
+                                
+                                Created trees for the planterboxes (see HappyTrees project)</p>
+
+                                <p><br>Random Development Stuff:</p>
+                                <img src="../assets/GoCones/gocones_driving.gif" alt="">
+                                <video style="width: 100%; margin: 20px 0;" controls>
+                                    <source src="../assets/GoCones/backflip.mp4" type="video/mp4" >
+                                    Your browser does not support the video tag.
+                                    </video>
+                            
                             <button class="hide">HIDE</button>
                         </div>
                     </div>

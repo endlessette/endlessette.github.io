@@ -60,7 +60,7 @@
                 <div class="caption">
                     <h4>Style</h4>
                     <p>Designed to replicate the glowing colors and smooth, flowing movement of jellyfish</p>
-                    <button class="show-more">MORE</button>
+                    <button class="show-more"hidden disabled>MORE</button>
                 </div>
                 <div class="expandable-content">
                     <div class="full-content">
@@ -77,7 +77,7 @@
                     <div class="caption">
                         <h4>Bell Mesh Generation</h4>
                         <p>Created HDA to procedurally generate various jellyfish bell shapes for quick iteration</p>
-                        <button class="show-more">MORE</button>
+                        <button class="show-more"hidden disabled>MORE</button>
                     </div>
                     <div class="expandable-content">
                         <div class="full-content">
@@ -97,8 +97,10 @@
                     </div>
                     <div class="expandable-content">
                         <div class="full-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                            <p>The movement of the jellyfish bell was created based on a sine wave, with parameters to control the color, transparency, and movement speeds of the animation.</p>
+                            <img src="../assets/Jellyfish/jellyfish_materialgraph.png" alt="Bell Shader">
+                            <img src="../assets/Jellyfish/jellyfish_materialinstance.png" alt="Bell Shader">
+                            
                             <button class="hide">HIDE</button>
                         </div>
                     </div>
@@ -115,8 +117,8 @@
                     </div>
                     <div class="expandable-content">
                         <div class="full-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                            <p>The jellyfish actor blueprint provided tentacle position data (based on the bell shader's position / actor position) to the niagara system, which used a ribbon particle system to simulate the tentacles. Each particle in the chain moved based on the movement of particles at the top of the chain, giving natural flowing movement.</p>
+                            <img src="../assets/Jellyfish/jellyfish_niagarasystem.png" alt="Tentacles System">
                             <button class="hide">HIDE</button>
                         </div>
                     </div>
@@ -132,8 +134,9 @@
                     </div>
                     <div class="expandable-content">
                         <div class="full-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                            <p>The original tentacle positions were recorded in the blueprint, and animated in the same way the bell shader was animated using the same calculations in order to move the tentacle linking positions in the same way the bell moved despite the shader being visual only. </p>
+                            <p><br>The jellyfish's velocity was also tied to these calculations - using the value of the sine wave, the jellyfish's speed was mapped to a curve that made the jellyfish move only when animated as doing so.</p>
+                            <img src="../assets/Jellyfish/jellyfish_blueprint.png" alt="Jellyfish Movement">
                             <button class="hide">HIDE</button>
                         </div>
                     </div>
