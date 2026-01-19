@@ -66,7 +66,9 @@
 
 .caption {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px 20px;
     position: relative;
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
@@ -75,15 +77,20 @@
 
 .caption h4 {
     margin: 0 0 10px 0;
+    flex: 1 1 100%;
 }
 
 .caption p {
     margin: 0;
-    padding-right: 80px; /* Make space for the button */
+    flex: 1 1 auto;
+    
+    white-space: normal;
 }
 
 .show-more {
-    position: absolute;
+
+    flex: 0 0 auto;
+    margin-left: auto;
     right: 20px;
     bottom: 20px; /* Align with bottom padding */
     background: none;
