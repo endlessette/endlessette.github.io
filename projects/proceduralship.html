@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Scada:wght@400;700&display=swap" rel="stylesheet">
+    <title>Procedural Ship | Endlessette Osborn</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../project-detail.css">
+    <link rel="shortcut icon" type="image/png" href="assets/seal_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html">
+                <img src="../assets/seal_logo.png" alt="seal" class="logo">
+                <h1>Endlessette Osborn</h1>
+                <h2>Technical Artist</h2>
+            </a>
+            
+            <div class="social-links">
+                <a href="mailto:endlessette@gmail.com" class="social-circle"  target="_blank" style = "align-content: center;">
+                    <i class="fa fa-envelope" style="color: rgb(62, 53, 119);font-size: 150%;vertical-align: middle;"></i>
+                </a>
+                <a href="https://lectroblob.itch.io" class="social-circle"  target="_blank" style = "align-content: center;">
+                    <i class="fa fa-gamepad"style="color: rgb(62, 53, 119);font-size: 150%;vertical-align: middle;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/endlessette/" class="social-circle"  target="_blank" style = "align-content: center;">
+                    <i class="fa-brands fa-linkedin-in"style="color: rgb(62, 53, 119);font-size: 150%;vertical-align: middle;"></i>
+                </a>
+            </div>
+
+            <nav>
+                <div class="tab-buttons">
+                    <a href="../index.html?tab=projects" class="tab-btn" data-tab="projects">Projects</a>
+                    <a href="../index.html?tab=games" class="tab-btn" data-tab="games">Games</a>
+                    <a href="../index.html?tab=tta" class="tab-btn" data-tab="tta">TTA</a>
+                    <a href="../index.html?tab=resume" class="tab-btn" data-tab="resume">Resume</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="project-detail">
+            <div class="cover-image">
+                <img src="../assets/ShipCustomization/ship_variations.gif" alt="Project Cover">
+            </div>
+
+            <h3 class="project-title">[WIP] Procedural runtime ship customization</h3>
+            <p class="project-description">A system that allows players ingame to fully customize their ships. Created using Unreal geometry scripting.</p>
+
+            <div class="project-metadata">
+                <div class="metadata-item">
+                    <h4>DATE:</h4>
+                    <p>MAY 2025 - PRESENT</p>
+                </div>
+                <!-- <div class="metadata-item">
+                    <h4>AWARD:</h4>
+                    <p>Best Stylized</p>
+                </div> -->
+            </div>
+
+            <div class="content-section">
+                
+                <div class="image-row">
+                    <img src="../assets/ShipCustomization/hullgenerator.gif" alt="">
+                    <img src="../assets/ShipCustomization/ship_editing.gif" alt="">
+                    <img src="../assets/ShipCustomization/shipbuilding.gif" alt="">
+                    
+                </div>
+                <div class="caption">
+                    <h4>Spline-based hull control system</h4>
+                    <p>System that reshapes the shape of the hull based on a profile and length splines.</p>
+                </div>
+                <div class="full-content">
+                    <p>I started this project wanting the player to be able to fully control every aspect of the hull design by utilizing spline positions for the highest amount of customization. To do this, I devised a system that took a flat plane and shaped it into the shape of a ship based on the spline positions. The system starts with two main splines - the profile spline (which represents the top edge of the ship), and the length spline (which is the line from the front of the ship, to the bottom, to the back). A plane is then generated with X resolution, and the width and length of this plane is set to match the width and length of the profile and length splines combined. The profile and length splines are divided up into a polypath (also with X resolution). Then, for every vertex on the plane, the position is determined by the row and column (and mapped with a lerp to the corresponding row and/or column on the length or profile splines). For example, vertices in the center column of the plane (in a line lengthwise) will lerp to the Z coordinate of the corresponding length spline, while those on the outer columns will lerp to the Z coordinate of the profile spline (and all vertices in between will be partway between both). This value is further controlled with parameters determining the strength of the lerp.</p>
+                    <p><br>This system resulted in a plane that perfectly conforms to the splines. The next step was giving the player runtime control over those splines after I had the system working in editor. I debated a lot of different ways to approach this, but in the end decided on a 2D editor on the side of the screen where the player can drag the spline points and have the ship react in realtime.</p>
+                    <p><br>I've since added a vector-based runtime flag painting system for players to be able to customize masts on the ships, object placement (for furniture, masts, structures, etc), and improved the ui to make it more intuitive. Further planned work includes improvements on controlling location of the floors/walls, adding rooms and buildings, customizing textures, hull painting, increased mast control, and more.</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="project-credits">
+                <h3>Credits</h3>
+                <p>Created by Endlessette Osborn</p>
+            </div>
+        </main>
+    </div>
+    <script src="../project-detail.js"></script>
+</body>
+</html> 

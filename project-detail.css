@@ -180,3 +180,18 @@
         padding: 0 0.5rem;
     }
 } 
+
+
+
+
+.image-row {
+    display: flex;    
+    justify-content: center; 
+    gap: 0px;       
+    flex-wrap: wrap;     
+  }
+  
+  .image-row img {
+    width: 33%;  
+    height: auto;         
+  }
